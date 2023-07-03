@@ -45,7 +45,7 @@ public class CompareEntryActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public boolean onNavigationItemSelected(MenuItem item) {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.my_drawer_layout);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.my_drawer_layout_compare_entry);
         drawer.closeDrawer(GravityCompat.START);
         if(!item.getTitle().toString().equals("Search profile") && !item.getTitle().toString().equals("Compare profiles")) {
             Intent intent = new Intent(CompareEntryActivity.this, ContestListActivty.class);

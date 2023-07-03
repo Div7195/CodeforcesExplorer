@@ -88,20 +88,11 @@ public class ContestListActivty extends AppCompatActivity {
             if (item.getTitle().equals("Search profile")) {
                     Intent intent = new Intent(ContestListActivty.this, MainActivity.class);
                     startActivity(intent);
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("entryRole", "user");
-//                    intent.putExtras(bundle);
-//                    startActivity(intent);
-//                    return true;
+//
                 Toast.makeText(this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
             } else if (item.getTitle().equals("Compare profiles")) {
-
-
-//                    Intent intent = new Intent(ContestListActivty.this, MainActivity.class);
-//                    Bundle bundle = new Bundle();
-//                    bundle.putString("entryRole", "user");
-//                    intent.putExtras(bundle);
-//                    startActivity(intent);
+                Intent intent = new Intent(ContestListActivty.this, CompareEntryActivity.class);
+                startActivity(intent);
                 Toast.makeText(this, item.getTitle().toString(), Toast.LENGTH_SHORT).show();
 
 

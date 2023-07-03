@@ -10,10 +10,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.navigation.NavigationView;
 
 public class CompareActivity extends AppCompatActivity {
+    ImageView firstView, secondView;
+    TextView fProfile, sProfile, fRating, sRating, fRank, sRank, fMaxRating, sMaxRating, fMaxRank, sMaxRank;
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
@@ -23,6 +27,18 @@ public class CompareActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String profileName = bundle.getString("profileName", "");
         Log.d("debugging", profileName);
+        firstView = findViewById(R.id.firstImage);
+        secondView = findViewById(R.id.secondImage);
+        fProfile = findViewById(R.id.firstProfileField);
+        sProfile = findViewById(R.id.secondProfileField);
+        fRating = findViewById(R.id.firstRatingField);
+        sRating = findViewById(R.id.secondRatingField);
+        fRank = findViewById(R.id.firstRankField);
+        sRank = findViewById(R.id.secondRankField);
+        fMaxRating = findViewById(R.id.firstMaxRatingField);
+        sMaxRating = findViewById(R.id.secondMaxRatingField);
+        fMaxRank = findViewById(R.id.firstMaxRankField);
+        sMaxRating = findViewById(R.id.secondMaxRankField);
 
         drawerLayout = findViewById(R.id.my_drawer_layout_compare);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
