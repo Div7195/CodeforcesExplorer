@@ -6,7 +6,7 @@ An android app through which we can get details of contests, details of profiles
 - See detailed comparison of profiles, with bar charts and graph
 - Get to contest page on codeforces through contest list item
 
-The andorid app has been made by majorly using the following:
+The app has been made by using majorly the following:
 - Java as main language and XML for layouts
 - Custom adapters
 - Volley library(for GET requests)
