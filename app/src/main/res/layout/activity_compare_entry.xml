@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- the root view must be the DrawerLayout -->
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_drawer_layout_compare_entry"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompareEntryActivity"
+    android:background="@drawable/gradient_background"
+    tools:ignore="HardcodedText">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="128dp"
+            android:gravity="center"
+            android:text="Compare profiles"
+            android:textColor="@color/green"
+            android:textSize="22sp" />
+        <EditText
+            android:id="@+id/firstInputField"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:paddingStart="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/border_text"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:hint="Enter first profile"/>
+        <EditText
+            android:id="@+id/secnondInputField"
+            android:layout_width="300dp"
+            android:layout_height="55dp"
+            android:paddingStart="10dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/border_text"
+            android:textSize="25sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dp"
+            android:hint="Enter second profile"/>
+
+        <Button
+            android:id="@+id/compareButtonView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Compare"/>
+
+
+    </LinearLayout>
+
+    <!-- this the navigation view which draws and shows the navigation drawer -->
+    <!-- include the menu created in the menu folder -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_menu_compare_entry"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

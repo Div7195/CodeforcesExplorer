@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/nav_profile"
+        android:title="Search profile"
+        />
+
+    <item
+        android:id="@+id/nav_upcoming"
+        android:title="Upcoming contests" />
+
+    <item
+        android:id="@+id/nav_live"
+        android:title="Live contests" />
+
+    <item android:id="@+id/nav_past"
+        android:title="Past contests"/>
+    <item android:id="@+id/nav_compare"
+        android:title="Compare profiles"/>
+
+</menu>
