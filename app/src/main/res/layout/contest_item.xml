@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="Type"
+            android:text="Duration"
             android:textColor="#dacd0f"
             android:textSize="12sp" />
 
@@ -66,7 +66,7 @@
             android:text=":"
             android:textSize="12sp" />
         <TextView
-            android:id="@+id/contestTypeField"
+            android:id="@+id/contestDurationField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
@@ -86,7 +86,7 @@
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:textColor="#dacd0f"
-            android:text="Duration"
+            android:text="Type"
             android:textSize="12sp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:text=":"
             android:textSize="12sp"/>
         <TextView
-            android:id="@+id/contestDurationField"
+            android:id="@+id/contestTypeField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="3dp"
