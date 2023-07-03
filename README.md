@@ -12,4 +12,4 @@ The andorid app has been made by majorly using the following:
 - Volley library(for GET requests)
 - MpAndroidChart(for line charts and bar charts)
 - Android studio
-The app utilises the CODEFORCES API for fetching all kinds of details related to profiles, contests, submissions etc.
+- The app utilises the CODEFORCES API for fetching all kinds of details related to profiles, contests, submissions etc.
