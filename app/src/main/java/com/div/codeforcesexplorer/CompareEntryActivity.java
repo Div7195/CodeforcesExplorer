@@ -9,6 +9,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -26,6 +27,7 @@ public class CompareEntryActivity extends AppCompatActivity {
 
         compareButtonView = findViewById(R.id.compareButtonView);
         firstInputView = findViewById(R.id.firstInputField);
+        secondInputView = findViewById(R.id.secnondInputField);
         drawerLayout = findViewById(R.id.my_drawer_layout_compare_entry);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
@@ -35,6 +37,20 @@ public class CompareEntryActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_menu_compare_entry);
         navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
+
+        compareButtonView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CompareEntryActivity.this, CompareActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("firstProfileName", firstInputView.getText().toString());
+                bundle.putString("secondProfileName", secondInputView.getText().toString());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

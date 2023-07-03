@@ -39,14 +39,15 @@
 
                     <ImageView
                         android:id="@+id/firstImage"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginRight="10dp"
                         />
                     <ImageView
                         android:id="@+id/secondImage"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="40dp"
                         />
 
 
@@ -62,7 +63,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="#dacd0f"
                         />
                     <LinearLayout
@@ -74,7 +75,7 @@
                         android:id="@+id/firstProfileField"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:text="Profile"
                         />
@@ -83,7 +84,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         />
@@ -102,7 +103,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Rating"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="#dacd0f"
                         />
                     <LinearLayout
@@ -114,7 +115,7 @@
                         android:id="@+id/firstRatingField"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:text="Profile"
                         />
@@ -123,7 +124,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         />
@@ -141,7 +142,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Rank"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="#dacd0f"
                         />
                     <LinearLayout
@@ -153,7 +154,7 @@
                         android:id="@+id/firstRankField"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:text="Profile"
                         />
@@ -162,7 +163,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         />
@@ -180,7 +181,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="MaxRating"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="#dacd0f"
                         />
                     <LinearLayout
@@ -192,7 +193,7 @@
                         android:id="@+id/firstMaxRatingField"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:text="Profile"
                         />
@@ -202,7 +203,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         />
@@ -220,7 +221,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="MaxRank"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="#dacd0f"
                         />
                     <LinearLayout
@@ -232,7 +233,7 @@
                         android:id="@+id/firstMaxRankField"
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:text="Profile"
                         />
@@ -241,7 +242,7 @@
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text="Profile"
-                        android:textSize="20sp"
+                        android:textSize="14sp"
                         android:textColor="@color/white"
                         android:layout_marginLeft="20dp"
                         />
@@ -250,6 +251,21 @@
                 </LinearLayout>
             </LinearLayout>
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rating History"
+                    android:textStyle="italic"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/green"
+                    android:textSize="25sp"/>
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/combinedRatingChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="258dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/white" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -263,15 +279,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Problems Solved"
-                    android:textStyle="italic"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/green"
-                    android:textSize="25sp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Rating History"
                     android:textStyle="italic"
                     android:layout_marginTop="10dp"
                     android:layout_marginLeft="5dp"
