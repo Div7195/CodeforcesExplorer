@@ -181,10 +181,20 @@ public class ProfileActivity extends AppCompatActivity {
                         JSONArray jsonArray = jsonResponse.getJSONArray("result");
                         JSONObject jsonProfileObj = (JSONObject) jsonArray.get(0);
                         String image = (String)jsonProfileObj.get("avatar");
-                        String rank = "("+(String) jsonProfileObj.get("rank")+")";
+                        String rank = "";
+                        if(jsonProfileObj.has("rank")){
+                             rank = "("+(String) jsonProfileObj.get("rank")+")";
+                        }
+
                         String name = (String) jsonProfileObj.get("handle");
-                        String org = (String) jsonProfileObj.get("organization");
-                        String currentRating = (String.valueOf(jsonProfileObj.getInt("rating"))+" (max. "+(String) jsonProfileObj.get("maxRank")+", "+String.valueOf( jsonProfileObj.getInt("maxRating"))+")");
+                        String org = "";
+                        if(jsonProfileObj.has("organization")){
+                            org = (String) jsonProfileObj.get("organization");
+                        }
+                        String currentRating = "";
+                        if(jsonProfileObj.has("rating") && jsonProfileObj.has("maxRank") && jsonProfileObj.has("maxRating")){
+                            currentRating = (String.valueOf(jsonProfileObj.getInt("rating"))+" (max. "+(String) jsonProfileObj.get("maxRank")+", "+String.valueOf( jsonProfileObj.getInt("maxRating"))+")");
+                        }
                         String contribution = String.valueOf(jsonProfileObj.getInt("contribution")) + " contributions";
                         String friends = String.valueOf(jsonProfileObj.get("friendOfCount"))+" users";
                         Integer lastOnline = (Integer) jsonProfileObj.get("lastOnlineTimeSeconds");

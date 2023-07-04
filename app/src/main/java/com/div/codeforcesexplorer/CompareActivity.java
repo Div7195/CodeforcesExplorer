@@ -340,11 +340,23 @@ public class CompareActivity extends AppCompatActivity {
                         JSONArray jsonArray = jsonResponse.getJSONArray("result");
                         JSONObject jsonProfileObj = (JSONObject) jsonArray.get(0);
                         String image = (String) jsonProfileObj.get("avatar");
-                        String rank = "("+(String) jsonProfileObj.get("rank")+")";
+                        String rank = "";
+                        String currentRating = "";
+                        String maxRank = "";
+                        Integer maxRating = 0;
+                        if(jsonProfileObj.has("rank")) {
+                            rank = "(" + (String) jsonProfileObj.get("rank") + ")";
+                        }
                         String name = (String) jsonProfileObj.get("handle");
-                        String currentRating = String.valueOf(jsonProfileObj.getInt("rating"));
-                        String maxRank = (String) jsonProfileObj.get("maxRank");
-                        Integer maxRating = (Integer) jsonProfileObj.get("maxRating");
+                        if(jsonProfileObj.has("rating")) {
+                            currentRating = String.valueOf(jsonProfileObj.getInt("rating"));
+                        }
+                        if(jsonProfileObj.has("maxRank")) {
+                            maxRank = (String) jsonProfileObj.get("maxRank");
+                        }
+                        if(jsonProfileObj.has("maxRating")){
+                            maxRating = (Integer) jsonProfileObj.get("maxRating");
+                        }
                         Picasso.get().load(image).into(firstView, new Callback() {
                             @Override
                             public void onSuccess() {
