@@ -13,3 +13,9 @@ An android app through which we can get details of contests, details of profiles
 - MpAndroidChart(for line charts and bar charts)
 - Android studio
 - Codeforces API for fetching all kinds of details related to profiles, contests, submissions etc.
+  
+### Cloning project
+- Clone the repository
+- Generate an api key and secret key on codeforces website
+- Set the value of api keys and secret in following files to your generated keys: ContestListActivity, ProfileActivity.
+- Run the app
