@@ -67,8 +67,8 @@ public class ProfileActivity extends AppCompatActivity {
     ListView submissionListView;
     ArrayList<Entry> dataValue = new ArrayList<>();
     private final String apiUrlInformation = "https://codeforces.com/api/user.info?";
-    private final String apiKey = "18849620bd25c43c6a542b0a328715a2c64534d1";
-    private final String secret = "40fa813568a1071aec7616c87340eb0515c3c904";
+    private final String apiKey = "";
+    private final String secret = "";
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
     @Override
@@ -275,7 +275,7 @@ public class ProfileActivity extends AppCompatActivity {
                     throw new RuntimeException(e);
                 }
                 SubmissionAdapter adapter = new SubmissionAdapter(ProfileActivity.this, submissionArrayList);
-                // Attach the adapter to a ListView
+
                 ListView listView = (ListView) findViewById(R.id.submissionList);
                 listView.setVisibility(View.VISIBLE);
                 listView.setAdapter(adapter);
@@ -303,7 +303,7 @@ public class ProfileActivity extends AppCompatActivity {
             listItem.measure(0, 0);
             totalHeight += listItem.getMeasuredHeight();
         }
-        //setting listview item in adapter
+
         ViewGroup.LayoutParams params = myListView.getLayoutParams();
         params.height = totalHeight + (myListView.getDividerHeight() * (myListAdapter.getCount() - 1));
         myListView.setLayoutParams(params);

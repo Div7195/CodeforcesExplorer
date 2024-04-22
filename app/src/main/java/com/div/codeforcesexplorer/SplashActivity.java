@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_splash);
-        // Use a Handler to delay starting the MainActivity
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

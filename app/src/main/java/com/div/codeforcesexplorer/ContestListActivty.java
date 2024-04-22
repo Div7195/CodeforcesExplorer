@@ -45,8 +45,8 @@ public class ContestListActivty extends AppCompatActivity {
     String goToActivity = "";
     
     private final String apiUrl = "https://codeforces.com/api/contest.list?gym=false";
-    private final String apiKey = "18849620bd25c43c6a542b0a328715a2c64534d1";
-    private final String secret = "40fa813568a1071aec7616c87340eb0515c3c904";
+    private final String apiKey = "";
+    private final String secret = "";
     public DrawerLayout drawerLayout;
     public ActionBarDrawerToggle actionBarDrawerToggle;
 
@@ -242,14 +242,14 @@ public class ContestListActivty extends AppCompatActivity {
             //do nothing return null
             return;
         }
-        //set listAdapter in loop for getting final size
+
         int totalHeight = 0;
         for (int size = 0; size < myListAdapter.getCount(); size++) {
             View listItem = myListAdapter.getView(size, null, myListView);
             listItem.measure(0, 0);
             totalHeight += listItem.getMeasuredHeight();
         }
-        //setting listview item in adapter
+
         ViewGroup.LayoutParams params = myListView.getLayoutParams();
         params.height = totalHeight + (myListView.getDividerHeight() * (myListAdapter.getCount() - 1));
         myListView.setLayoutParams(params);

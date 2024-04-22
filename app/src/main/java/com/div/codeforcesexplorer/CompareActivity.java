@@ -47,10 +47,10 @@ import java.util.Set;
 public class CompareActivity extends AppCompatActivity {
     BarChart barChart, barChartProblem;
 
-    // variable for our bar data.
+
     BarData barData, barDataProblem;
 
-    // variable for our bar data set.
+
     BarDataSet barDataSet, barDataSetProblem;
     LineChart lineChart;
     ImageView firstView, secondView;
@@ -69,7 +69,7 @@ public class CompareActivity extends AppCompatActivity {
     ArrayList<Entry> secondRatingValues = new ArrayList<>();
 
 
-    // array list for storing entries.
+
     ArrayList barEntriesArrayList;
     ArrayList barEntriesTotalProblems;
     @Override
@@ -166,17 +166,16 @@ public class CompareActivity extends AppCompatActivity {
                                         barDataSet = new BarDataSet(barEntriesArrayList, "Total contests appeared");
                                         barData = new BarData(barDataSet);
 
-                                        // below line is to set data
-                                        // to our bar chart.
+
                                         barChart.setData(barData);
 
-                                        // adding color to our bar data set.
+
                                         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
 
-                                        // setting text color.
+
                                         barDataSet.setValueTextColor(Color.BLACK);
 
-                                        // setting text size
+
                                         barDataSet.setValueTextSize(16f);
                                         barChart.getDescription().setEnabled(false);
                                         LineDataSet lineDataSet1 = new LineDataSet(firstRatingValues,"First profile" );

@@ -33,7 +33,7 @@ public class CompareEntryActivity extends AppCompatActivity {
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
 
-        // to make the Navigation drawer icon always appear on the action bar
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_menu_compare_entry);
         navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
